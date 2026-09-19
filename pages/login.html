@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PM | Acesso ao Sistema</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <section class="login-box">
+
+             <span class="brand-pm">
+                P.M.S.P
+            </span>
+
+            <h1>ACESSO AO SISTEMA</h1>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="id">ID</label>
+                    <input
+                        type="text"
+                        id="id"
+                        name="id"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">SENHA</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                    >
+                </div>
+
+                <button type="submit">
+                    ACESSAR
+                </button>
+
+            </form>
+
+            <p id="login-error" class="login-error">
+                ID ou senha incorretos.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
