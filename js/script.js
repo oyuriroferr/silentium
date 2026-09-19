@@ -36,14 +36,6 @@ if (loginForm) {
         const error =
             document.getElementById("login-error");
 
-
-        /*
-         * Credenciais provisórias.
-         *
-         * Troque posteriormente pelas credenciais
-         * definidas no projeto.
-         */
-
         const validId = "admin";
         const validSenha = "1234";
 
@@ -53,12 +45,14 @@ if (loginForm) {
             senha === validSenha
         ) {
 
-            window.location.href =
-                "pages/mia.html";
+            error.style.display = "none";
+            window.location.href = "https://google.com";
 
         } else {
 
             error.style.display = "block";
+            senhaInput.value = "";
+            senhaInput.focus();
 
         }
 
