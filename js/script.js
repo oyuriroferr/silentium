@@ -21,15 +21,36 @@ paragrafo.textContent += "- ÚLTIMO ACESSO: [" + horarioAcesso + "]";
 
 const loginForm = document.getElementById("loginForm");
 
-function onAcess() {
-  var passwd;
-  passwd = document.getElementById('senha').value;
-  if(passwd=="1234"){
-  window.open ('https://google.com')
-  }
-  else{
-  alert('Password wrong');
-  }
+function onAcess(event) {
+    // Evita o recarregamento automático da página ao enviar o formulário
+    if (event) {
+        event.preventDefault();
+    }
+
+    // Captura os valores digitados nos campos
+    var idInput = document.getElementById('id').value;
+    var passwdInput = document.getElementById('senha').value;
+
+    // Elemento para exibir mensagem de erro
+    var errorMsg = document.getElementById('login-error');
+
+    // Verifica se o ID é "admin" e a senha é "1234"
+    if (idInput === "admin" && passwdInput === "1234") {
+        if (errorMsg) {
+            errorMsg.style.display = 'none'; // Esconde a mensagem de erro se estiver visível
+        }
+        // Redireciona a aba atual para o Google
+        window.location.href = 'https://google.com';
+        
+        // Caso prefira abrir em uma nova aba, use:
+        // window.open('https://google.com', '_blank');
+    } else {
+        if (errorMsg) {
+            errorMsg.style.display = 'block'; // Exibe a mensagem de erro da página
+        } else {
+            alert('ID ou senha incorretos.');
+        }
+    }
 }
 
 /*
