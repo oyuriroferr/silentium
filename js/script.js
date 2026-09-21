@@ -21,6 +21,18 @@ paragrafo.textContent += "- ÚLTIMO ACESSO: [" + horarioAcesso + "]";
 
 const loginForm = document.getElementById("loginForm");
 
+function onAcess() {
+  var passwd;
+  passwd = document.getElementById('senha').value;
+  if(passwd=="1234"){
+  window.open ('https://google.com')
+  }
+  else{
+  alert('Password wrong');
+  }
+}
+
+/*
 if (loginForm) {
 
     loginForm.addEventListener("submit", function (event) {
@@ -59,3 +71,4 @@ if (loginForm) {
     });
 
 }
+*/
